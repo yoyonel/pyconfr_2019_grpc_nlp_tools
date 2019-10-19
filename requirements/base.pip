@@ -1,0 +1,29 @@
+argparse
+coloredlogs
+jsonschema>=3.0.1
+python-dateutil>=2.8.0
+tqdm>=4.32.2
+
+# ASYNCIO
+uvloop>=0.13.0
+
+# DB
+pymongo
+
+# GRPC
+grpcio
+grpcio-tools
+grpcio-reflection
+mypy-protobuf
+
+# PROCESSING
+pandas
+pydantic
+
+# LANG
+langdetect
+pycountry
+spacy
+spacy-langdetect
+textblob
+textblob-fr
