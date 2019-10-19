@@ -14,3 +14,11 @@ include Pipfile.lock
 prune tests
 
 global-exclude *.py[cod] __pycache__ *.so *.dylib
+
+include *.md
+include *.txt
+recursive-include requirements *.md
+
+include *.yaml
+include *.yml
+exclude .coveragerc

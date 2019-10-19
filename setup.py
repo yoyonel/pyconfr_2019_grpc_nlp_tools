@@ -1,15 +1,11 @@
 #!/usr/bin/env python
 """The setup script."""
-from distutils.command.build_py import build_py as _build_py
-from distutils.command.sdist import sdist as _sdist
 from itertools import chain
 from pathlib import Path
 from typing import Dict, List
 
-import setuptools
 from setuptools import find_packages
 from setuptools import setup
-from setuptools.command.develop import develop as _develop
 
 # Parse requirements files
 REQS = {
@@ -32,15 +28,16 @@ DEPENDENCY_LINKS = path_dependency_links.open().read().splitlines() if path_depe
 
 long_description = Path("README.md").read_text()
 
-
 setup(
     name="pyconfr_2019_grpc_nlp_tools",
     author="Lionel ATTY",
     author_email="yoyonel@hotmail.com",
-    url="",
+    url="http://github.com/yoyonel/pyconfr_2019_grpc_nlp_tools",
     use_scm_version=True,
     description="",
+    # https://packaging.python.org/guides/making-a-pypi-friendly-readme/
     long_description=long_description,
+    long_description_content_type='text/markdown',
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     package_data={},
@@ -50,15 +47,13 @@ setup(
     extras_require={
         "test": REQS["BASE_ALL"] + REQS["TEST"],
         "develop": REQS["BASE_ALL"] + REQS["TEST"] + REQS["DEV"],
-        "docs": REQS["DOCS"],
+        "docs": REQS["DOCS"]
     },
     dependency_links=DEPENDENCY_LINKS,
     classifiers=[
         "Programming Language :: Python :: 3.7",
     ],
     python_requires=">=3.7",
-    cmdclass={},
-    entry_points={},
     # https://github.com/pypa/sample-namespace-packages/issues/6
     zip_safe=False,
 )

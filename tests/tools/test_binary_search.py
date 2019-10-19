@@ -3,8 +3,7 @@ from typing import List
 
 import pytest
 
-from tcsctalents.twitter_analyzer.tools.binary_search import (
-    binary_search_find_last_true)
+from pyconfr_2019.grpc_nlp.tools.binary_search import binary_search_find_last_true
 
 
 # https://docs.pytest.org/en/latest/example/parametrize.html#parametrizing-conditional-raising
