@@ -12,7 +12,8 @@ PACKAGE_VERSION:=$(shell python setup.py --version | tr + _)
 DOCKER_USER?=yoyonel
 DOCKER_TAG?=$(DOCKER_USER)/$(PROJECT_NAME):${PACKAGE_VERSION}
 #
-PYPI_SERVER?=
+PYPI_SERVER?=pypitest
+PYPI_CONFIG_FILE?=${HOME}/.pypirc
 PYPI_REGISTER?=
 # https://stackoverflow.com/questions/2019989/how-to-assign-the-output-of-a-command-to-a-makefile-variable
 PYPI_SERVER_HOST=$(shell echo $(PYPI_SERVER) | sed -e "s/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/")
@@ -47,8 +48,11 @@ ${SDIST_PACKAGE}: ${SOURCES}
 pypi-register:
 	python setup.py register -r ${PYPI_REGISTER}
 	
-pypi-upload: pypi-register
-	python setup.py sdist upload -r ${PYPI_REGISTER}
+pypi-upload: ${SDIST_PACKAGE}
+	twine upload \
+		--repository ${PYPI_SERVER} \
+		--config-file ${PYPI_CONFIG_FILE} \
+		dist/*
 
 pip-install:
 	@pip install \
