@@ -51,9 +51,10 @@ setup(
     },
     dependency_links=DEPENDENCY_LINKS,
     classifiers=[
+        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
     ],
-    python_requires=">=3.7",
+    python_requires=">=3.6",
     # https://github.com/pypa/sample-namespace-packages/issues/6
     zip_safe=False,
 )
