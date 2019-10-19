@@ -32,7 +32,7 @@ setup(
     name="pyconfr_2019_grpc_nlp_tools",
     author="Lionel ATTY",
     author_email="yoyonel@hotmail.com",
-    url="http://github.com/yoyonel/pyconfr_2019_grpc_nlp_tools",
+    url="https://github.com/yoyonel/pyconfr_2019_grpc_nlp_tools.git",
     use_scm_version=True,
     description="",
     # https://packaging.python.org/guides/making-a-pypi-friendly-readme/
