@@ -11,11 +11,7 @@ import sys
 
 import jsonschema
 from dateutil import parser
-
-# six.string_types
-# Possible types for text data.
-# This is basestring() in Python 2 and str in Python 3.
-from tcsctalents.twitter_analyzer.tools.fct_json import DefaultValidatingDraft4Validator
+from pyconfr_2019.grpc_nlp.tools.fct_json import DefaultValidatingDraft4Validator
 
 string_types = str
 

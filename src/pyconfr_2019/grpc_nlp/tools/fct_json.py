@@ -1,8 +1,6 @@
 # Note copied from http://python-jsonschema.readthedocs.io/en/latest/faq/
 
-from jsonschema.validators import (
-    Draft4Validator, extend
-)
+from jsonschema.validators import Draft4Validator, extend
 
 
 def extend_with_default(validator_class):

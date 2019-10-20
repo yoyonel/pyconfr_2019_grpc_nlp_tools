@@ -5,8 +5,7 @@ import logging
 
 from grpc import insecure_channel
 
-#
-from tcsctalents.twitter_analyzer.tools.check_connectivity import check_connectivity
+from pyconfr_2019.grpc_nlp.tools.check_connectivity import check_connectivity
 
 logger = logging.getLogger(__name__)
 

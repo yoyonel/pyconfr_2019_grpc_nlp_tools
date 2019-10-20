@@ -5,8 +5,7 @@ import logging
 from typing import Optional
 
 import coloredlogs
-
-from tcsctalents.twitter_analyzer.tools.tqdm_logger import TqdmLoggingHandler
+from pyconfr_2019.grpc_nlp.tools.tqdm_logger import TqdmLoggingHandler
 
 
 class IndentedLogger(logging.getLoggerClass()):

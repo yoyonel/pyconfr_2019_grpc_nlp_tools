@@ -1,6 +1,6 @@
+import datetime as datetime
 import datetime as dt
 
-import datetime as datetime
 from dateutil import parser
 from dateutil.tz import gettz
 
