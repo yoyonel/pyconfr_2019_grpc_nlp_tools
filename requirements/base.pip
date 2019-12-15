@@ -11,6 +11,7 @@ tqdm>=4.32.2
 uvloop>=0.13.0; platform_system != "Windows"
 
 # DB
+mongomock
 pymongo
 
 # GRPC
